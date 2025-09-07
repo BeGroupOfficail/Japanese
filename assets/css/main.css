@@ -829,9 +829,20 @@ textarea {
       Breadcrumb
 ===========================*/
 .breadcrumb__bg {
+  position: relative;
   background-size: cover;
   background-position: center;
-  padding: 120px 0;
+  padding: 100px 0;
+}
+.breadcrumb__bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 @media (max-width: 1199.98px) {
   .breadcrumb__bg {
@@ -849,6 +860,8 @@ textarea {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(18px);
   padding: 55px 90px 55px 60px;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 1199.98px) {
   .breadcrumb__content {
@@ -871,6 +884,7 @@ textarea {
   font-weight: 600;
   text-transform: uppercase;
   line-height: 1;
+  color: #fff;
 }
 @media (max-width: 1500px) {
   .breadcrumb__content .title {
@@ -904,7 +918,7 @@ textarea {
 }
 .breadcrumb__content .breadcrumb > * {
   font-size: 16px;
-  color: var(--tg-theme-primary);
+  color: #fff;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -1056,6 +1070,8 @@ textarea {
   margin: 0 0;
   text-transform: uppercase;
   font-weight: 600;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 1500px) {
   .section__title .title {
@@ -1078,15 +1094,15 @@ textarea {
   }
 }
 .section__title .number {
-  font-size: 160px;
-  font-weight: 600;
-  line-height: 0.75;
-  margin-bottom: 0;
-  color: var(--tg-color-gray-1);
-  z-index: -1;
-  position: absolute;
-  left: -60px;
-  top: 0;
+font-size: 90px;
+    font-weight: 600;
+    line-height: 0.75;
+    margin-bottom: 0;
+    color: #cd17192b;
+    z-index: 0;
+    position: absolute;
+    left: -60px;
+    top: 10px;
 }
 @media (max-width: 1500px) {
   .section__title .number {
@@ -3977,9 +3993,8 @@ textarea {
   }
 }
 .about__img-wrap img {
-  min-height: 450px;
-  object-fit: cover;
-  width: 100%;
+  height: 500px;
+    width: 100%;
 }
 .about__img-wrap-two {
   position: relative;
@@ -4249,7 +4264,7 @@ textarea {
   }
 }
 .about__content > p {
-  margin-bottom: 45px;
+  margin-bottom: 10px;
   font-size: 18px;
 }
 .about__content-two p {
@@ -4719,7 +4734,7 @@ textarea {
         07. Counter
 ===============================*/
 .counter__area {
-  background: var(--tg-theme-secondary);
+  background: var(--tg-theme-primary);
 }
 @media (max-width: 991.98px) {
   .counter__area {
@@ -5299,7 +5314,6 @@ textarea {
 .services__thumb-two img {
   width: 100%;
   height: 280px;
-  object-fit: cover;
 }
 .services__thumb-three {
   margin-right: 50px;
@@ -5389,6 +5403,7 @@ textarea {
   margin-bottom: 30px;
   font-size: 24px;
   writing-mode: vertical-rl;
+      height: 300px;
   transform: rotate(-180deg);
 }
 .services__content-hidden .title {
@@ -7331,7 +7346,7 @@ textarea {
   line-height: 1;
   gap: 6px;
   font-size: 16px;
-  color: var(--tg-color-dark);
+  color: #005091;
   transition: 0.5s;
 }
 .project__nav-two button {
@@ -11868,7 +11883,6 @@ textarea {
         26. Brand
 ===============================*/
 .brand__item {
-  min-height: 43px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -11879,6 +11893,7 @@ textarea {
 }
 .brand__item img {
   cursor: pointer;
+  height: 100px;
 }
 
 /*=============================
@@ -12016,7 +12031,6 @@ textarea {
 .contact__form-wrap {
   padding: 54px 60px 60px;
   border: 1px solid #F0F0F0;
-  margin-top: 30px;
 }
 @media (max-width: 1199.98px) {
   .contact__form-wrap {
@@ -12251,9 +12265,6 @@ textarea {
 .footer__logo {
   margin-bottom: 35px;
 }
-.footer__logo img {
-  max-height: 45px;
-}
 .footer__logo-two {
   margin-bottom: 0;
 }
@@ -12284,6 +12295,7 @@ textarea {
   display: -webkit-flex;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 .footer__social .list-wrap li a {
@@ -12346,6 +12358,14 @@ textarea {
 }
 .footer__newsletter p {
   margin-bottom: 25px;
+}
+.footer__newsletter a{
+      display: flex;
+    gap: 10px;
+}
+.footer__newsletter a i{
+      height: 100%;
+    margin-top: 6px;
 }
 .footer__newsletter-form {
   position: relative;
