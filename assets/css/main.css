@@ -780,6 +780,11 @@ textarea {
   font-size: 20px;
   padding: 0;
 }
+.banner-video{
+  height: 84vh;
+    width: 100%;
+    object-fit: cover;
+}
 .offCanvas__side-info {
   border-top: 1px solid var(--tg-theme-primary);
   padding-top: 25px;
